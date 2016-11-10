@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<NunitGoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalOutputPath>.\Results</LocalOutputPath>
+  <TakeScreenshotAfterTestFailed>true</TakeScreenshotAfterTestFailed>
+  <GenerateReport>true</GenerateReport>
+  <SendEmails>false</SendEmails>
+  <AddLinksInsideEmail>true</AddLinksInsideEmail>
+  <ServerLink>http://localhost/folder/</ServerLink>
+  <TestHistoryDaysLength>2</TestHistoryDaysLength>
+  <MaxTestVersionsNumber>10</MaxTestVersionsNumber>
+</NunitGoConfiguration>

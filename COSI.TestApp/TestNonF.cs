@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnitGoCore.Attributes;
 using COSI.TestApp.Pages;
 
 namespace COSI.TestApp
 {
+    [TestFixture]
     class TestNonF
     {
         private MainPage mp;
@@ -16,7 +18,7 @@ namespace COSI.TestApp
             mp = new MainPage(TestSetup.WebDriver);
         }
 
-        [Test]
+        [Test, NunitGoAction(testName: "NF_TC1_TreeGot10Items")]
         [Description("req 2.2.2 After start tree node should contain 10 children elements: letters from A to J inclusive ")]
         public void NF_TC1_TreeGot10Items()
         {
@@ -31,7 +33,7 @@ namespace COSI.TestApp
             }
         }
 
-        [Test]
+        [Test, NunitGoAction(testName: "NF_TC2_GridGot16Items")]
         [Description("2.3.2 Grid should contain 16 rows: letters from K to Z inclusive")]
         public void NF_TC2_GridGot16Items()
         {

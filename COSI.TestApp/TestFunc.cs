@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NUnitGoCore.Attributes;
 using COSI.TestApp.Pages;
 
 
 namespace COSI.TestApp
 {
+    [TestFixture]
     class TestFunc
     {
         private MainPage mp;
@@ -19,6 +21,7 @@ namespace COSI.TestApp
 
         [TestCase("Z")]
         [Description("1.2.1 Grid Add.")]
+        [NunitGoAction]
         public void Fn_TC1_AddToGrid(string letter)
         {
             mp.Refresh();
@@ -41,6 +44,7 @@ namespace COSI.TestApp
 
         [TestCase("Z")]
         [Description("1.2.4 Delete.")]
+        [NunitGoAction]
         public void Fn_TC2_DelGridItem(string letter)
         {
             mp.Refresh();
@@ -58,6 +62,7 @@ namespace COSI.TestApp
 
         [TestCase("A")]
         [Description("1.3.1 Add.")]
+        [NunitGoAction]
         public void Fn_TC3_AddToTree(string letter)
         {
             mp.Refresh();
@@ -80,6 +85,7 @@ namespace COSI.TestApp
 
         [TestCase("A")]
         [Description("1.3.4 Delete.")]
+        [NunitGoAction]
         public void Fn_TC4_DelTreeItem(string letter)
         {
             mp.Refresh();
@@ -97,6 +103,7 @@ namespace COSI.TestApp
         [TestCase("A")]
         // [TestCase("C")] //...
         [Description("1.1.1.1 Drag-and-drop. User should be able to DD one item from tree to grid.")]
+        [NunitGoAction]
         public void Fn_TC5_DnDTree2Grid(string letter)
         {
             mp.Refresh();
@@ -117,6 +124,7 @@ namespace COSI.TestApp
 
         [TestCase("Z")]
         [Description("1.1.1.2 Drag-and-drop. User should be able to DD one item from grid to tree.")]
+        [NunitGoAction]
         public void Fn_TC6_DnDGrid2Tree(string letter)
         {
             mp.Refresh();
